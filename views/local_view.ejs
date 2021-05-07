@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local View</title>
+
+    <link rel="stylesheet" href="/bs/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        const socket = io();
+        socket.on('file', (file) => {
+            console.log(file);
+            const files = document.getElementById('files')
+            const card = create_card(file.originalname, file.size)
+            files.innerHTML += (card)
+        })
+        function formatBytes(bytes, decimals) {
+            if (bytes == 0) return '0 Bytes';
+            var k = 1024,
+                dm = decimals || 2,
+                sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+                i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+        }
+
+
+        function create_card(name, size) {
+            return `<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">${name}</h5>
+    <p class="card-text">Size: ${formatBytes(size)}</p>
+    <a href="#" class="btn btn-primary">Save</a>
+  </div>
+</div>`
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>URL: <%= data.url %>
+    </h1>
+    <h5>Or</h5>
+    <h3>Simply scan qrcode</h3>
+    <img src="data:image/png;base64, <%= data.qrcode %>" alt="">
+
+    <div id="files"></div>
+
+
+    <script src="/bs/js/bootstrap.min.js"></script>
+</body>
+
+</html>

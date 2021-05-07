@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="<%= data.url %>/javascripts/sender.js"></script> -->
+    <!-- <link rel="stylesheet" href="<%= data.url %>/stylesheets/sender.scss"> -->
+    <style>
+        <%=data.style %>
+    </style>
+    <title>Send files</title>
+</head>
+
+<body>
+
+
+    <button id="js-upload-file">Enviar arquivo</button>
+    <div class="file-container">
+        <div class="file-overlay"></div>
+        <div class="file-wrapper">
+            <input class="file-input" id="js-file-input" type="file" />
+            <div class="file-content">
+                <div class="file-infos">
+                    <p class="file-icon"><i class="fas fa-file-upload fa-7x"></i><span
+                            class="icon-shadow"></span><span>Click to browse<span class="has-drag"> or drop file
+                                here</span></span></p>
+                </div>
+                <p class="file-name" id="js-file-name">No file selected</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="<%= data.url %>/javascripts/sender.js"></script>
+
+</body>
+
+</html>
