@@ -1,7 +1,7 @@
 const express = require("express");
 const config = require("../config");
 const router = express.Router();
-const sass = require("node-sass");
+const sass = require("sass");
 const path = require("path");
 
 const create_qrcode = require("../utils/qrcode");
