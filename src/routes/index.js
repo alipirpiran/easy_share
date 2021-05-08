@@ -6,9 +6,11 @@ const path = require("path");
 
 const create_qrcode = require("../utils/qrcode");
 
-const upload_router = require('./upload')
+const upload_router = require("./upload");
+const dl_router = require("./dl");
 
-router.use('/upload', upload_router)
+router.use("/upload", upload_router);
+router.use("/dl", dl_router);
 
 /* GET home page. */
 router.get("/", async function (req, res, next) {

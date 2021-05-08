@@ -11,8 +11,10 @@ class IO {
     }
 
     set_events() {
-        this.io.on("connection", () => {
+        this.io.on("connection", (socket) => {
             console.log("new client connected");
+
+            socket.on("save", (name) => {});
         });
     }
 

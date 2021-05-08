@@ -15,10 +15,9 @@
     <script>
         const socket = io();
         socket.on('file', (file) => {
-            console.log(file);
             const files = document.getElementById('files')
             const card = create_card(file.originalname, file.size)
-            files.innerHTML += (card)
+            files.innerHTML = card + files.innerHTML
         })
         function formatBytes(bytes, decimals) {
             if (bytes == 0) return '0 Bytes';
@@ -29,13 +28,17 @@
             return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
         }
 
+        function save(name) {
+            socket.emit("save", name)
+        }
+
 
         function create_card(name, size) {
             return `<div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">${name}</h5>
     <p class="card-text">Size: ${formatBytes(size)}</p>
-    <a href="#" class="btn btn-primary">Save</a>
+    <a href="/dl?name=${name}" class="btn btn-primary" onclick="save('${name}')" target="_blank" name="${name}" >Save</a>
   </div>
 </div>`
         }
