@@ -1,5 +1,6 @@
 module.exports = {
     local_ip: "",
     port: "",
-    url: ''
+    url: "",
+    production: true,
 };

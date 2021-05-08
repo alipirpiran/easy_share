@@ -13,7 +13,11 @@ async function run() {
     config.local_ip = ip.address();
     config.url = "http://" + config.local_ip + ":" + config.port;
 
-    if (process.env.NODE_ENV == "production") open(config.url);
+    if (process.env.NODE_ENV == "development") {
+        config.production = false;
+    }
+
+    if (config.production) open(config.url);
 }
 
 run();
