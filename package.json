@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "start": "DEBUG=easy-share* NODE_ENV=production node ./src/start.js",
-        "test": "DEBUG=easy-share* nodemon ./src/start.js",
+        "test": "DEBUG=easy-share* NODE_ENV=development nodemon ./src/start.js",
         "build": "NODE_ENV=production nexe  -r ./src/public -r ./node_modules -r ./src/views -o out/easy_share  ./src/start.js -b "
     },
     "dependencies": {
