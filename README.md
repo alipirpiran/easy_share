@@ -37,7 +37,7 @@ npm i & npm run build
 
 ### Building
 
-```console
+```bash
 git clone https://github.com/alipirpiran/easy_share.git
 cd easy_share
 npm i & npm run build
