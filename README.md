@@ -8,6 +8,15 @@ simple application to Transfer Files between devices
 * Scan qrcode with mobile, and send Files!
 * Run on computer and use in other devices!
 
+## Instalation
+
+```bash
+git clone https://github.com/alipirpiran/easy-share.git
+cd easy_share
+npm i & npm run build
+./out/easy_share
+```
+
 ## Usage
 
 1. Connect devices to a network (Eg: mobile hotspot)
@@ -29,7 +38,7 @@ simple application to Transfer Files between devices
 ### Building
 
 ```console
-git clone 
+git clone https://github.com/alipirpiran/easy-share.git
 cd easy_share
 npm i & npm run build
 ```
