@@ -18,8 +18,14 @@ class IO {
         });
     }
 
-    new_file_received(file) {
-        this.io.emit("file", file);
+    new_file_received(file_info) {
+        this.io.emit("file", file_info);
+    }
+
+    progress_info(
+        info = { progress: "", file_id: "", file_name: "", speed: 0 }
+    ) {
+        this.io.emit("progress", info);
     }
 }
 
