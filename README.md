@@ -8,7 +8,7 @@ simple application to Transfer Files between devices
 * Scan qrcode with mobile, and send Files!
 * Run on computer and use in other devices!
 
-## Instalation
+## Installation
 
 ```bash
 git clone https://github.com/alipirpiran/easy_share.git
