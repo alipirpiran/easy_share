@@ -1,6 +1,11 @@
 {
     "name": "easy-share",
     "version": "0.0.0",
+    "author": {
+        "name": "Ali Pirpiran",
+        "email": "alipirpiran@gmail.com",
+        "url": "https://github.com/alipirpiran"
+    },
     "private": true,
     "scripts": {
         "start": "DEBUG=easy-share* NODE_ENV=production node ./src/start.js",
