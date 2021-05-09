@@ -11,7 +11,7 @@ simple application to Transfer Files between devices
 ## Instalation
 
 ```bash
-git clone https://github.com/alipirpiran/easy-share.git
+git clone https://github.com/alipirpiran/easy_share.git
 cd easy_share
 npm i & npm run build
 ./out/easy_share
@@ -38,7 +38,7 @@ npm i & npm run build
 ### Building
 
 ```console
-git clone https://github.com/alipirpiran/easy-share.git
+git clone https://github.com/alipirpiran/easy_share.git
 cd easy_share
 npm i & npm run build
 ```
