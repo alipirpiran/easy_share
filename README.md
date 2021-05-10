@@ -28,7 +28,7 @@ npm i & npm run build
 
 1. Connect devices to a network (Eg: mobile hotspot)
 
-2. run Easy Share
+2. run Easy Share on pc
 
 3. open generated URL in mobile browser (or simply scan qrcode)
 
