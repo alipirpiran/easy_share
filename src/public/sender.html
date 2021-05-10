@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send File</title>
+    <link rel="stylesheet" href="/bs/css/bootstrap.min.css">
+
+
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="jumbotron">
+            <form action="" class="form-inline">
+                <div class="custom-file text-dark ">
+                    <input type="file" class="custom-file-input " id="input">
+                    <label class="custom-file-label" for="input">Choose File</label>
+                </div>
+            </form>
+            <button onclick="upload()" class="btn btn-outline-primary btn-lg btn-block mt-4">Send</button>
+        </div>
+
+
+        <div id="files">
+            <div class="uploaded ">
+                <i class="far fa-file-pdf"></i>
+                <div class="file">
+                    <div class="">
+                        <p class="text-justify">${name}</p>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated"
+                            style="width:100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="/bs/js/bootstrap.min.js"></script>
+    <script src="/jquery.js"></script>
+    <script src="/javascripts/sender.js"></script>
+
+</body>
+
+</html>
