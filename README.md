@@ -1,12 +1,21 @@
-
 # Easy Share
 
 simple application to Transfer Files between devices
 
+<br>
+
+<p align="center"> 
+<img  src="./imgs/mobile_view.png" alt="sender view" width="200" />
+
+<img src="./imgs/receiver_view.png" alt="sender view" width="223"/>
+</p>
+<br>
+<br>
+
 ## Features
 
-* Scan qrcode with mobile, and send Files!
-* Run on computer and use in other devices!
+- Scan qrcode with mobile, and send Files!
+- Run on computer and use in other devices!
 
 ## Installation
 
@@ -29,9 +38,9 @@ npm i & npm run build
 
 ## Technologies Used
 
-* Socket.IO
-* express js
-* nexe
+- Socket.IO
+- express js
+- nexe
 
 ## Contributing
 
