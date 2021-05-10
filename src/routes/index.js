@@ -21,17 +21,17 @@ router.get("/", async function (req, res, next) {
             data: { url: config.url, qrcode: qrcode_base64.toString("base64") },
         });
         return;
+    } else {
+        const scss_path = path.join(
+            __dirname + "",
+            "../public/stylesheets/sender.scss"
+        );
+
+        const scss_data = sass.renderSync({ file: scss_path });
+        res.render("sender_view_1", {
+            data: { url: config.url, style: scss_data.css },
+        });
     }
-
-    const scss_path = path.join(
-        __dirname + "",
-        "../public/stylesheets/sender.scss"
-    );
-
-    const scss_data = sass.renderSync({ file: scss_path });
-    res.render("sender_view_1", {
-        data: { url: config.url, style: scss_data.css },
-    });
 });
 
 router.get("/sender", async (req, res) => {
