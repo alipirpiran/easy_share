@@ -9,8 +9,6 @@ simple application to Transfer Files between devices
 
 <img src="./imgs/receiver_view.png" alt="sender view" width="223"/>
 </p>
-<br>
-<br>
 
 ## Features
 
