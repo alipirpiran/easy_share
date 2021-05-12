@@ -26,7 +26,7 @@ npm i & npm run build
 
 ## Usage
 
-1. Connect devices to a network (Eg: mobile hotspot)
+1. Connect devices to same Wifi (Eg: mobile hotspot)
 
 2. run Easy Share on pc
 
